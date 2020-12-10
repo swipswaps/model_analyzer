@@ -26,6 +26,7 @@ class CLI:
     """
     CLI class to parse the commandline arguments
     """
+
     def __init__(self):
         self._parser = ArgumentParser()
         self._add_arguments()
@@ -110,7 +111,7 @@ class CLI:
             '--triton-launch-mode',
             type=str,
             choices=['local', 'docker', 'remote'],
-            default='local',
+            default='docker',
             help="The method by which to launch Triton Server. "
                  "'local' assumes tritonserver binary is available locally. "
                  "'docker' pulls and launches a triton docker container with "
